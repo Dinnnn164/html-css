@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфоліо | Онлайн-галерея</title>
+    <link rel="stylesheet" href="portfolio.css"> 
+</head>
+<body>
+
+    <header>
+        <h1>Портфоліо</h1>
+        <p>Галерея ілюстрацій та малюнків для дітей</p>
+    </header>
+
+    
+
+    <section class="upload">
+        <h2>Завантажити свою ілюстрацію</h2>
+        <input type="file" id="uploadInput" accept="image/*">
+        <button onclick="uploadImage()">Завантажити</button>
+    </section>
+
+    <footer>
+        <nav class="bottom-nav">
+            <ul>
+                <li><a href="/index.html">Домашня</a></li>
+                <li><a href="/pages/about/about.html">Про нас</a></li>
+                <li><a href="pages/services.html">Послуги</a></li>
+                <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
+                <li><a href="/pages/contact/contact.html">Контакти</a></li> 
+            </ul>
+        </nav>
+    </footer>
+
+    <script>
+        function uploadImage() {
+            let input = document.getElementById('uploadInput');
+            if (input.files && input.files[0]) {
+                let reader = new FileReader();
+                reader.onload = function(e) {
+                    let newImage = document.createElement('div');
+                    newImage.classList.add('gallery-item');
+                    newImage.innerHTML = `<img src="${e.target.result}" alt="Завантажений малюнок"><p>Нова ілюстрація</p>`;
+                    document.querySelector('.gallery').appendChild(newImage);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+    </script>
+
+</body>
+</html>

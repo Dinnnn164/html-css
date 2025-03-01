@@ -1,0 +1,87 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('/assets/images/picture.5.webp') no-repeat center center fixed;
+    background-size: cover;
+    background-color: rgba(255, 255, 255, 0.859); 
+}
+
+header {
+    text-align: center;
+    color: #6f068f;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    padding: 20px 0;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 5px auto;
+    padding: 10px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.about-container h2 {
+    color: #6f068f;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+}
+
+.about-container p {
+    font-size: 18px;
+    color: #444;
+    line-height: 1.6;
+}
+
+.mission {
+    font-style: italic;
+    color: #ff6b6b;
+    font-weight: bold;
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid #ff6b6b;
+}
+
+.bottom-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 8px;
+}
+/* Анімація при наведенні */
+.bottom-nav a:hover {
+    background-color: #f0e68cc6; 
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
