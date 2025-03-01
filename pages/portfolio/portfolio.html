@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфоліо | Онлайн-галерея</title>
-    <link rel="stylesheet" href="portfolio.css"> 
+    <link rel="stylesheet" href="portfolio.css">
 </head>
 <body>
 
@@ -13,12 +13,28 @@
         <p>Галерея ілюстрацій та малюнків для дітей</p>
     </header>
 
-    
+    <section class="gallery-container">
+        <section class="gallery">
+            <div class="gallery-item">
+                <img src="/assets/images/picture.1.jpg" alt="Малюнок 1">
+                <p>Казковий птах</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/picture.2.jpg" alt="Малюнок 2">
+                <p>Загадкова дівчина</p>
+            </div>
+            <div class="gallery-item">
+                <img src="/assets/images/picture.3.jpg" alt="Малюнок 3">
+                <p>Всесвіт дитинства</p>
+            </div>
+        </section>
+    </section>
 
     <section class="upload">
         <h2>Завантажити свою ілюстрацію</h2>
+        <input type="text" id="imageTitle" placeholder="Введіть назву ілюстрації">
         <input type="file" id="uploadInput" accept="image/*">
-        <button onclick="uploadImage()">Завантажити</button>
+        <button id="uploadButton">Завантажити</button>
     </section>
 
     <footer>
@@ -26,28 +42,13 @@
             <ul>
                 <li><a href="/index.html">Домашня</a></li>
                 <li><a href="/pages/about/about.html">Про нас</a></li>
-                <li><a href="pages/services.html">Послуги</a></li>
                 <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
-                <li><a href="/pages/contact/contact.html">Контакти</a></li> 
+                <li><a href="/pages/contact/contact.html">Контакти</a></li>
             </ul>
         </nav>
     </footer>
 
-    <script>
-        function uploadImage() {
-            let input = document.getElementById('uploadInput');
-            if (input.files && input.files[0]) {
-                let reader = new FileReader();
-                reader.onload = function(e) {
-                    let newImage = document.createElement('div');
-                    newImage.classList.add('gallery-item');
-                    newImage.innerHTML = `<img src="${e.target.result}" alt="Завантажений малюнок"><p>Нова ілюстрація</p>`;
-                    document.querySelector('.gallery').appendChild(newImage);
-                };
-                reader.readAsDataURL(input.files[0]);
-            }
-        }
-    </script>
+    <script src="portfolio.js"></script>
 
 </body>
 </html>
