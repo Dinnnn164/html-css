@@ -8,37 +8,44 @@
 </head>
 <body>
 
-    <header>
-        <h1>Портфоліо</h1>
-        <p>Галерея ілюстрацій та малюнків для дітей</p>
-    </header>
+<header>
+    <h1>Портфоліо</h1>
+    <p>Галерея ілюстрацій та малюнків для дітей</p>
+</header>
 
-    <section class="gallery-container">
-        <section class="gallery" id="gallery">
-
-        </section>
+<section class="gallery-container">
+    <section class="gallery" id="gallery">
+       
     </section>
+</section>
 
-    <section class="upload">
-        <h2>Завантажити свою ілюстрацію</h2>
-        <input type="text" id="imageTitle" placeholder="Введіть назву ілюстрації">
-        <input type="file" id="uploadInput" accept="image/*">
-        <button id="uploadButton">Завантажити</button>
-        <button id="clearGallery">Очистити галерею</button>
-    </section>
+<section class="upload">
+    <h2>Завантажити свою ілюстрацію</h2>
+    <input type="text" id="imageTitle" placeholder="Введіть назву ілюстрації">
+    <input type="text" id="imageAuthor" placeholder="Введіть ім'я автора">
+    
+    <!-- Заміна поля для року на календар -->
+    <label for="imageYear">Виберіть рік створення:</label>
+    <input type="date" id="imageYear" placeholder="Виберіть рік" max="2025">
+    
+    <textarea id="imageDescription" placeholder="Введіть опис ілюстрації"></textarea>
+    <input type="file" id="uploadInput" accept="image/*">
+    <button id="uploadButton">Завантажити</button>
+    <button id="clearGallery">Очистити галерею</button>
+</section>
 
-    <footer>
-        <nav class="bottom-nav">
-            <ul>
-                <li><a href="/index.html">Галерея</a></li>
-                <li><a href="/pages/about/about.html">Про нас</a></li>
-                <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
-                <li><a href="/pages/contact/contact.html">Контакти</a></li>
-            </ul>
-        </nav>
-    </footer>
+<footer>
+    <nav class="bottom-nav">
+        <ul>
+            <li><a href="/index.html">Галерея</a></li>
+            <li><a href="/pages/about/about.html">Про нас</a></li>
+            <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
+            <li><a href="/pages/contact/contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+</footer>
 
-    <script src="portfolio.js"></script>
+<script src="portfolio.js"></script>
 
 </body>
 </html>
