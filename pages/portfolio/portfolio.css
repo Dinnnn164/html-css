@@ -5,8 +5,8 @@ body {
     background: url('/assets/images/picture.5.webp') no-repeat center center fixed;
     text-align: center;
     background-size: cover;
-    background-color: rgba(255, 255, 255, 0.859); /* Додає білу прозорість */
-    min-height: 100vh; /* ✅ Забезпечує, що сторінка розтягується */
+    background-color: rgba(255, 255, 255, 0.859); 
+    min-height: 100vh; 
     padding-bottom: 100px;
 }
 
@@ -48,7 +48,7 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 .gallery-container {
-    padding-bottom: 200px; /* ✅ Додає відступ, щоб контент не заходив під footer */
+    padding-bottom: 200px; 
 }
 
 .upload {
@@ -79,7 +79,7 @@ header {
 }
 
 .bottom-nav {
-    position: relative; /* ✅ Виправлено з "fixed", щоб не блокував прокрутку */    bottom: 0;
+    position: relative; bottom: 0;
     left: 0;
     width: 100%;
     background: linear-gradient(135deg, #ff9a9e, #fad0c4);

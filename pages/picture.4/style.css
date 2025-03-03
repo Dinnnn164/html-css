@@ -1,77 +1,62 @@
-
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: url('/assets/images/picture.5.webp') no-repeat center center fixed;
+    text-align: center;
     background-size: cover;
     background-color: rgba(255, 255, 255, 0.859); 
     min-height: 100vh; 
-    overflow-y: auto; 
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 100px;
 }
 
-main {
-    flex: 1; 
-    padding-bottom: 120px; 
-}
-
-
-header {
+header h1 {
     text-align: center;
-    color: #6f068f; 
+    color: #6f068f;
+    font-size: 36px;
+    margin: 40px 0;
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+.painting-info {
+    text-align: center;
+    padding: 40px 20px;
+    background-color: #fff;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
 
-.hero {
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin: 10px 0;
-    height: 100px; 
-    background-color: #f0e68c; 
-    font-family: 'Comic Sans MS', cursive, sans-serif; 
-    font-size: 24px; 
-    color: #6f068f; 
-    border: 2px dashed #ff6b6b; 
+.painting-info img {
+    width: 60%; 
+    max-width: 500px;
+    height: auto;
+    padding: 5px;
+    border-radius: 4rem;
+    border: 5px solid #000000;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.painting-info img:hover {
+    transform: scale(1.05);
 }
 
 
-
-
-
-.footer-text {
-    font-size: 12px;
-    color: #666;
-    text-align: light;
-    margin-top: 5px;
+.painting-info h2 {
+    color: #6f068f;
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bold;
 }
 
-
-.pictures {
-    display: flex;
-    justify-content: left;
-    gap: 1rem;
-    margin: 20px;
+.painting-info p {
+    color: #444;
+    font-size: 18px;
+    margin-bottom: 12px;
+    line-height: 1.5;
 }
-
-.pictures img {
-    max-width: 80%; 
-    height: auto; 
-    border-radius: 1rem;
-    transition: all .4s ease;
-    border: 5px solid #ff6b6b;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.pictures img:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-
 
 /* Нижня панель */
 .bottom-nav {
@@ -85,7 +70,6 @@ header {
     padding: 15px 0;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
     border-top: 3px solid #ff6b6b;
-    z-index: 10;
 }
 
 .bottom-nav ul {
@@ -116,7 +100,7 @@ header {
 
 /* Анімація при наведенні */
 .bottom-nav a:hover {
-    background-color: #f0e68cc6; 
+    background-color: #f0e68cc6;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
