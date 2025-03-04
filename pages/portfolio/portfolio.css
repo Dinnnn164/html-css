@@ -44,6 +44,56 @@ header {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
+
+.gallery-item button {
+    padding: 10px 15px;
+    margin: 5px 0;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Кнопка перегляду опису */
+.gallery-item .view-description {
+    background: linear-gradient(135deg, #4CAF50, #2E8B57);
+    color: white;
+}
+
+.gallery-item .view-description:hover {
+    background: #2E8B57;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопка редагування */
+.gallery-item .edit-image {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    color: #6f068f;
+}
+
+.gallery-item .edit-image:hover {
+    background: #FFA500;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Кнопка видалення */
+.gallery-item .delete-image {
+    background: linear-gradient(135deg, #FF6B6B, #FF4757);
+    color: white;
+}
+
+.gallery-item .delete-image:hover {
+    background: #FF4757;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
 .upload {
     margin-top: 30px;
     padding: 20px;
