@@ -1,60 +1,157 @@
 
 body {
-    font-family: 'Poppins', sans-serif; 
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     background: url('/assets/images/picture.5.webp') no-repeat center center fixed;
     background-size: cover;
 }
 
-header {
-    text-align: center;
-    color: #6f068f; 
-    font-family: 'Comic Sans MS', cursive, sans-serif; 
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 12px;
+    max-width: 900px;
+    margin: 50px auto;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form {
-    max-width: 600px;
-    margin: 20px auto;
+.image-section {
+    flex: 1;
+    text-align: center;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.contact-form h2 {
+.image-section img {
+    max-width: 90%;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    border: 4px solid #ff6600;
+}
+
+.form-section {
+    flex: 1;
+    padding: 20px;
+    max-width: 400px;
+}
+
+h2 {
+    color: #ff6600;
     text-align: center;
-    color: #6f068f;
+    font-size: 26px;
 }
 
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    color: #6f068f;
+p {
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
 
-.contact-form input,
-.contact-form textarea,
-.contact-form select {
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 12px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #444;
+}
+
+input, textarea {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    padding: 12px;
+    margin-top: 5px;
+    border: 2px solid #ff6600;
+    border-radius: 8px;
+    font-size: 16px;
+    background: #fff;
+    transition: 0.3s ease-in-out;
 }
 
-.contact-form button {
-    width: 100%;
-    padding: 10px;
-    background-color: #6f068f;
-    color: #fff;
+input:focus, textarea:focus {
+    border-color: #e65c00;
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 102, 0, 0.5);
+}
+
+textarea {
+    height: 120px;
+    resize: none;
+}
+
+
+
+.contact-info {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+.contact-info a {
+    align-items: start;
+    text-decoration: none;
+    color: #ff6600;
+    font-weight: bold;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* Чекбокс */
+.terms {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    gap: 5px; 
+    flex-wrap: nowrap; 
+}
+
+.terms input {
+    margin-right: 6px;  
+    transform: scale(0.8);  
+}
+
+.terms a {
+    color: #ff6600;
+    text-decoration: none;
+}
+
+.terms a:hover {
+    text-decoration: underline;
+}
+
+
+button {
+    background-color: #ff6600;
+    color: white;
     border: none;
-    border-radius: 5px;
+    padding: 12px;
+    border-radius: 8px;
     cursor: pointer;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: 0.3s;
 }
 
-.contact-form button:hover {
-    background-color: #ff6b6b;
+button:hover {
+    background-color: #e65c00;
+    transform: scale(1.05);
 }
 
 /* Нижня панель */
@@ -69,6 +166,7 @@ header {
     padding: 15px 0;
     box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
     border-top: 3px solid #ff6b6b;
+    z-index: 10;
 }
 
 .bottom-nav ul {
@@ -97,14 +195,13 @@ header {
     border-radius: 8px;
 }
 
-/* Анімація при наведенні */
 .bottom-nav a:hover {
-    background-color: #f0e68cc6; 
+    background-color: #f0e68cc6;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* вертикальні роздільники */
+/* Вертикальні роздільники */
 .bottom-nav li:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -115,4 +212,19 @@ header {
     width: 2px;
     background: rgba(255, 255, 255, 0.5);
     border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-section img {
+        max-width: 100%;
+    }
+
+    .form-section {
+        max-width: 100%;
+    }
 }
