@@ -5,24 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Головна | Онлайн-галерея</title>
     <link rel="stylesheet" href="css/style.css">
+    <script defer src="galery.js"></script>
 </head>
 <body>
     <header>
-        <h1>Ласкаво просимо до онлайн-галереї</span></h1>
+        <h1>Ласкаво просимо до онлайн-галереї</h1>
     </header>
     
     <section class="hero">
         <p>Місце, де оживають дитячі ілюстрації та мистецтво</p>
     </section>
-    
 
     <section class="gallery-container">
-        <section class="gallery" id="gallery">
-          
-        </section>
+        <section class="gallery" id="gallery"></section>
     </section>
-    
-
 
     <div class="pictures">
         <a href="/pages/picture.1/picture.html">
@@ -40,15 +36,29 @@
         <a href="/pages/picture.5/picture.html">
             <img src="/assets/images/picture.8.jpg" alt="Картина 5">
         </a>
-      
-       
+        <a href="/pages/picture.6/picture.html">
+            <img src="/assets/images/picture.7.jpg" alt="Картина 6">
+        </a>
     </div>
     
+    <nav class="burger-menu">
+        <button class="burger-btn" onclick="toggleMenu()">&#9776;</button>
+        <div class="burger-nav" id="burgerNav">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <ul>
+                <li><a href="/index.html">Галерея</a></li>
+                <li><a href="/pages/about/about.html">Про мене</a></li>
+                <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
+                <li><a href="/pages/contact/contact.html">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <footer>
         <nav class="bottom-nav">
             <ul>
                 <li><a href="/index.html">Галерея</a></li>
-                <li><a href="/pages/about/about.html">Про нас</a></li>
+                <li><a href="/pages/about/about.html">Про мене</a></li>
                 <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
                 <li><a href="/pages/contact/contact.html">Контакти</a></li>
             </ul>
