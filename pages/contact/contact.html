@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Контакти | Онлайн-галерея ілюстрацій</title>
         <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="/burger/burger.css">
     </head>
     
 <body>
@@ -39,6 +40,19 @@
         </div>
     </div>
 
+    <nav class="burger-menu">
+        <button class="burger-btn" onclick="toggleMenu()">&#9776;</button>
+        <div class="burger-nav" id="burgerNav">
+            <button class="close-btn" onclick="toggleMenu()">×</button>
+            <ul>
+                <li><a href="/index.html">Галерея</a></li>
+                <li><a href="/pages/about/about.html">Про мене</a></li>
+                <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
+                <li><a href="/pages/contact/contact.html">Контакти</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <footer>
         <nav class="bottom-nav">
             <ul>
@@ -49,5 +63,7 @@
             </ul>
         </nav>
     </footer>
+
+    <script src="/burger/burger.js"></script>
 </body>
 </html>

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Портфоліо | Онлайн-галерея</title>
     <link rel="stylesheet" href="portfolio.css">
+    <link rel="stylesheet" href="/burger/burger.css">
 </head>
 <body>
 
@@ -24,7 +25,6 @@
     <input type="text" id="imageTitle" placeholder="Введіть назву ілюстрації">
     <input type="text" id="imageAuthor" placeholder="Введіть ім'я автора">
     
-  
     <label for="imageYear">Виберіть рік створення:</label>
     <input type="date" id="imageYear" placeholder="Виберіть рік" max="2025">
     
@@ -33,6 +33,19 @@
     <button id="uploadButton">Завантажити</button>
     <button id="clearGallery">Очистити галерею</button>
 </section>
+
+<nav class="burger-menu">
+    <button class="burger-btn" onclick="toggleMenu()">&#9776;</button>
+    <div class="burger-nav" id="burgerNav">
+        <button class="close-btn" onclick="toggleMenu()">×</button>
+        <ul>
+            <li><a href="/index.html">Галерея</a></li>
+            <li><a href="/pages/about/about.html">Про мене</a></li>
+            <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
+            <li><a href="/pages/contact/contact.html">Контакти</a></li>
+        </ul>
+    </div>
+</nav>
 
 <footer>
     <nav class="bottom-nav">
@@ -45,6 +58,7 @@
     </nav>
 </footer>
 
+<script src="/burger/burger.js"></script>
 <script src="portfolio.js"></script>
 
 </body>

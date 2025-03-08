@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моє меню</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="burger-menu">
+        <button class="burger-btn" onclick="toggleMenu()">☰</button>
+    </div>
+
+    <nav id="burgerNav" class="burger-nav">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <ul>
+            <li><a href="/index.html">Галерея</a></li>
+            <li><a href="/pages/about/about.html">Про мене</a></li>
+            <li><a href="/pages/portfolio/portfolio.html">Портфоліо</a></li>
+            <li><a href="/pages/contact/contact.html">Контакти</a></li>
+        </ul>
+    </nav>
+
+    <script src="burger.js"></script>
+</body>
+</html>
