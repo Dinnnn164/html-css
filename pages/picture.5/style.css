@@ -18,6 +18,12 @@ header h1 {
     font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
+.highlight {
+    color: #923ab3;
+    font-weight: bold;
+    text-shadow: 0 -2px 8px rgb(255, 255, 255);
+}
+
 .painting-info {
     text-align: center;
     padding: 40px 20px;
