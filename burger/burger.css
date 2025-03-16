@@ -3,6 +3,7 @@
     top: 20px;
     right: 20px;
     z-index: 100;
+    display: none; 
 }
 
 .burger-btn {
@@ -21,7 +22,6 @@
     transform: rotate(90deg);
 }
 
-/* Бокове меню */
 .burger-nav {
     position: fixed;
     top: 0;
@@ -37,11 +37,9 @@
     transition: right 0.3s ease;
 }
 
-
 .burger-nav.active {
     right: 0;
 }
-
 
 .burger-nav .close-btn {
     position: absolute;
@@ -59,7 +57,6 @@
     transform: rotate(90deg);
 }
 
-/* Список навігації */
 .burger-nav ul {
     list-style: none;
     padding: 0;
@@ -92,4 +89,72 @@
     background: #f0e68c;
     color: #6f068f;
     transform: translateX(5px);
+}
+
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
+    border-top: 3px solid #ff6b6b;
+}
+
+.bottom-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom-nav li {
+    text-align: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.bottom-nav a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    padding: 10px 15px;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+/* Анімація при наведенні */
+.bottom-nav a:hover {
+    background-color: #f0e68cc6;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* вертикальні роздільники */
+.bottom-nav li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-30%);
+    height: 210%;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+    .bottom-nav {
+        display: none;
+    }
 }
